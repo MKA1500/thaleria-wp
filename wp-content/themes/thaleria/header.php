@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package thaleria
+ * @package MKTheme
  */
 
 ?>
@@ -22,37 +22,36 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'thaleria' ); ?></a>
-
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$thaleria_description = get_bloginfo( 'description', 'display' );
-			if ( $thaleria_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $thaleria_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		<div class="inner-header container">
+			<div class="site-branding">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img
+								id="logoWhite"
+								class="logo logo-white"
+								src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-white.png"/>
+							<img
+								id="logoColor"
+								class="logo logo-color"
+								src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-color.png"/>
+						</a>
+			</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'thaleria' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+			<nav id="site-navigation" class="main-navigation">
+				<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mktheme' ); ?></button> -->
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+				?>
+			</nav><!-- #site-navigation -->
+			<a class="mobileButton" id="navToggleMobile">
+          <span class="mobileButton__stripe"></span>
+          <span class="mobileButton__stripe"></span>
+          <span class="mobileButton__stripe"></span>
+      </a>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

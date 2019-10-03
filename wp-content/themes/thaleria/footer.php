@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package thaleria
+ * @package MKTheme
  */
 
 ?>
@@ -14,23 +14,26 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'thaleria' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'thaleria' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'thaleria' ), 'thaleria', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+		<div class="container">
+			<div class="secondary-menu">
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-2' ) ); ?>
+			</div>
+			<div class="footer-logo-container">
+				<img src="<?php echo get_stylesheet_directory_uri() .'/assets/logo-white.png'; ?>" alt="Forte PR">
+			</div>
+			<div class="fb-wrap">
+				<a href="https://www.facebook.com/fortePR/" target="_blank" title="Strona Forte PR na Facebooku">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</div>
+			<?php	$url = home_url(); ?>
+
+			<div class="copy">&copy; 2019 &nbsp;&nbsp; | &nbsp;&nbsp; Forte PR &nbsp;&nbsp; | &nbsp;&nbsp; <a href="<?php echo esc_url( $url ) . '\\/polityka-prywatnosci'; ?>" class="nav-item" target="_blank">Polityka prywatności</a></div>
 		</div><!-- .site-info -->
+		<button id="return-to-top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
 </body>
 </html>

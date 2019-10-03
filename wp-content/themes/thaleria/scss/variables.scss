@@ -1,0 +1,75 @@
+$dark-font: #1f1a17;
+$white: #FFF;
+$blue: #10346e;
+$blue-hover: #0a2859;
+$cherry: #d0243c;
+$cherry-hover: #ba142b;
+$grey: #999;
+$light-grey: #ddd;
+$super-light-grey: #f9f9f9;
+
+@mixin max-1920 {
+  @media (max-width: 1640px) {
+    @content;
+  }
+}
+@mixin max-1640 {
+  @media (max-width: 1640px) {
+    @content;
+  }
+}
+@mixin max-1460 {
+  @media (max-width: 1460px) {
+    @content;
+  }
+}
+@mixin max-1440 {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+@mixin max-1366 {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+@mixin max-1199 {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin max-1024 {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin max-991 {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+@mixin max-767 {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin max-600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin max-575 {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+@mixin min-1337 {
+  @media (min-width: 1337px) {
+    @content;
+  }
+}
+@mixin max-height-620 {
+  @media (max-height: 620px) {
+    @content;
+  }
+}

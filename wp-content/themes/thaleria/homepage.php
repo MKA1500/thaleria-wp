@@ -9,16 +9,16 @@ get_header();
     <div class="row align-items-center h-100">
 
       <div class="col-lg-6">
-        <h1>Hello, <span class="text-primary" data-typing="nice to meet you."></span></h1>
-        <p class="lead mt-5 mb-8">Strengthen your teams with a dedicated, transparent, reliable partner. Thaleria
-          puts efficiency and work ethic front and center of its Consulting Services.</p>
+        <h1><?php the_field('header-start'); ?><span class="text-primary" data-typing="nice to meet you."></span></h1>
+        <p class="lead mt-5 mb-8"><?php the_field('header-desc'); ?></p>
         <p class="gap-xy">
           <a class="btn btn-lg btn-round btn-outline-light mw-200" href="#first">Learn more</a>
         </p>
       </div>
 
       <div class="col-lg-6 ml-auto">
-        <img class="mt-5" src="assets/img/vector/cubes.png" alt="img">
+        <?php $image1 = get_field('tob-banner-image'); ?>
+        <img src="<?php echo $image1['url']; ?>" class="mt-5" Alt="cubes" />
       </div>
 
     </div>

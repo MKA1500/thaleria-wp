@@ -1,39 +1,49 @@
 <?php
 /**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package MKTheme
- */
+* The template for displaying the footer
+*
+* Contains the closing of the #content div and all content after.
+*
+* @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+*
+* @package MKTheme
+*/
 
 ?>
 
-	</div><!-- #content -->
+</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="container">
-			<div class="secondary-menu">
-				<?php wp_nav_menu( array( 'theme_location' => 'menu-2' ) ); ?>
-			</div>
-			<div class="footer-logo-container">
-				<img src="<?php echo get_stylesheet_directory_uri() .'/assets/logo-white.png'; ?>" alt="Forte PR">
-			</div>
-			<div class="fb-wrap">
-				<a href="https://www.facebook.com/fortePR/" target="_blank" title="Strona Forte PR na Facebooku">
-					<i class="fab fa-facebook"></i>
-				</a>
-			</div>
-			<?php	$url = home_url(); ?>
+<div id="colophon" class="site-footer">
+	<div class="container">
+		<div class="secondary-menu">
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-2' ) ); ?>
+		</div>
+	</div><!-- .site-info -->
+	<button id="return-to-top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+</div><!-- #colophon -->
 
-			<div class="copy">&copy; 2019 &nbsp;&nbsp; | &nbsp;&nbsp; Forte PR &nbsp;&nbsp; | &nbsp;&nbsp; <a href="<?php echo esc_url( $url ) . '\\/polityka-prywatnosci'; ?>" class="nav-item" target="_blank">Polityka prywatności</a></div>
-		</div><!-- .site-info -->
-		<button id="return-to-top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-	</footer><!-- #colophon -->
+<!-- Footer -->
+<footer class="footer bg-royal-blue">
+	<div class="container text-white">
+		<div class="row gap-y align-items-center">
+			<div class="col-md-3 text-center text-md-left">
+				<a href="<?php echo esc_url( $homeUrl ); ?>"><img src="assets/img/logo/thaleria-logo-white.png" alt="logo"></a>
+			</div>
+			<div class="col-md-6">
+				<div class="nav nav-center">
+					<a class="nav-link" href="/about-us.html">About Us</a>
+					<a class="nav-link" href="/services.html">Services</a>
+					<a class="nav-link" href="/careers.html">Join Us</a>
+					<a class="nav-link" href="/contact.html">Contact</a>
+				</div>
+			</div>
+			<div class="col-md-3 text-center text-md-right">
+				<small>Thaleria™ 2019. All rights reserved.</small>
+			</div>
+		</div>
+	</div>
+</footer><!-- /.footer -->
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
 </body>
 </html>

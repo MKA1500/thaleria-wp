@@ -48,3 +48,18 @@
     }
   }
 }
+
+.footer-menu {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    li {
+      a {
+        padding: 8px 17px;
+        color: $white!important
+      }
+    }
+  }
+}

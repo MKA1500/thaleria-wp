@@ -16,7 +16,7 @@
 <div id="colophon" class="site-footer">
 	<div class="container">
 		<div class="secondary-menu">
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-2' ) ); ?>
+
 		</div>
 	</div><!-- .site-info -->
 	<button id="return-to-top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
@@ -30,11 +30,8 @@
 				<a href="<?php echo esc_url( $homeUrl ); ?>"><img src="assets/img/logo/thaleria-logo-white.png" alt="logo"></a>
 			</div>
 			<div class="col-md-6">
-				<div class="nav nav-center">
-					<a class="nav-link" href="/about-us.html">About Us</a>
-					<a class="nav-link" href="/services.html">Services</a>
-					<a class="nav-link" href="/careers.html">Join Us</a>
-					<a class="nav-link" href="/contact.html">Contact</a>
+				<div class="nav nav-center footer-menu">
+					<?php wp_nav_menu( array( 'menu' => 'menu2' ) ); ?>
 				</div>
 			</div>
 			<div class="col-md-3 text-center text-md-right">

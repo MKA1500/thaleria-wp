@@ -52,7 +52,16 @@ get_header();
           ?>
           <div class="col-lg-4" id="post-<?php the_ID(); ?>">
             <div class="card card-body border text-center">
-              <p class="my-5"><i class="fab fa-java lead-8 text-blue"></i></p>
+              <p class="my-5">
+                <i class="fab fa-java lead-8 text-blue"></i>
+              </p>
+              <!-- <div class="frontpage-thumbnail">
+                <?php
+                if ( has_post_thumbnail() ) :
+                the_post_thumbnail();
+                endif;
+                ?>
+              </div> -->
               <h5><?php the_title(); ?></h5>
               <p><?php echo get_the_excerpt(); ?></p>
               <p>

@@ -13,15 +13,6 @@
 
 </div><!-- #content -->
 
-<div id="colophon" class="site-footer">
-	<div class="container">
-		<div class="secondary-menu">
-
-		</div>
-	</div><!-- .site-info -->
-	<button id="return-to-top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-</div><!-- #colophon -->
-
 <!-- Footer -->
 <footer class="footer bg-royal-blue">
 	<div class="container text-white">

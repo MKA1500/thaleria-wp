@@ -30,56 +30,55 @@ get_header();
   $content = apply_filters('the_content', $page->post_content);
   echo $content;
   ?>
-  <div class="job-posts-index">
-    <div class="row">
-      <?php
-      $counter = 1;
-      $args = array(
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'category_name' => 'Job Post',
-        'posts_per_page' => 5
-      );
-      $arr_posts = new WP_Query( $args );
-      if ( $arr_posts->have_posts() ) :
-      while ( $arr_posts->have_posts() ) :
-      $arr_posts->the_post();
-      ?>
-      <article id="post-<?php the_ID(); ?>" class="col-xl-8 post_<?php echo $counter; ?>">
-        <a href="<?php echo get_permalink( $post->ID ); ?>">
-          <div class="frontpage-thumbnail">
-            <?php
-            if ( has_post_thumbnail() ) :
-            the_post_thumbnail();
-            endif;
-            ?>
-          </div>
-          <div class="index-text">
-            <header class="entry-header">
-              <h2 class="entry-title"><?php the_title(); ?></h2>
-            </header>
-            <div class="entry-content">
+
+  <section class="section" id="current-openings">
+    <div class="container">
+      <header class="section-header text-white">
+        <h2><?php the_field('current-openings'); ?></h2>
+        <hr>
+      </header>
+      <div class="row gap-y">
+        <?php
+        $args = array(
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'category_name' => 'Job Post',
+          'posts_per_page' => 3
+        );
+        $arr_posts = new WP_Query( $args );
+        if ( $arr_posts->have_posts() ) :
+          while ( $arr_posts->have_posts() ) :
+          $arr_posts->the_post();
+          ?>
+          <div class="col-lg-4" id="post-<?php the_ID(); ?>">
+            <div class="card card-body border text-center">
+              <p class="my-5"><i class="fab fa-java lead-8 text-blue"></i></p>
+              <h5><?php the_title(); ?></h5>
+              <p><?php echo get_the_excerpt(); ?></p>
               <p>
-                <?php echo get_the_excerpt(); ?>
-                <strong>Czytaj więcej &raquo</strong>
+                <a
+                  class="small-3 fw-800 text-blue"
+                  href="<?php echo get_permalink( $post->ID ); ?>"
+                  target="_blank">Find out more
+                <i class="fa fa-angle-right small-5 pl-1"></i>
+              </a>
               </p>
             </div>
           </div>
-        </a>
-      </article>
-      <?php
-      $counter++;
-      endwhile;
-      endif;
-      ?>
+          <?php
+          endwhile;
+        endif;
+        ?>
+      </div>
     </div>
-    <div class="see-more">
-      <a href="<?php echo get_option("siteurl") .'/blog'; ?>" role="button" class="btn btn-default">
-        Zobacz więcej
-        <i class="fa fa-angle-right"></i>
+    <br>
+    <br>
+    <div class="col-md-12 text-center text-md-rigt">
+      <a class="btn btn-lg btn-round btn-outline-light mw-200" href="<?php echo get_option("siteurl") .'/careers'; ?>">
+        View all Open Positions
       </a>
     </div>
-  </div>
+  </section>
 </main>
 
 <?php

@@ -1,15 +1,9 @@
-$dark-font: #1f1a17;
 $white: #FFF;
-$blue: #10346e;
-$blue-hover: #0a2859;
-$cherry: #d0243c;
-$cherry-hover: #ba142b;
-$grey: #999;
-$light-grey: #ddd;
-$super-light-grey: #f9f9f9;
+$top-menu-gray: rgba(255, 255, 255, 0.65);
+$top-menu-gray-mobile: rgba(117, 117, 117, 0.8);
 
-@mixin max-1920 {
-  @media (max-width: 1640px) {
+@mixin max-991 {
+  @media (max-width: 991.98px) {
     @content;
   }
 }
@@ -43,11 +37,6 @@ $super-light-grey: #f9f9f9;
     @content;
   }
 }
-@mixin max-991 {
-  @media (max-width: 991px) {
-    @content;
-  }
-}
 @mixin max-767 {
   @media (max-width: 767px) {
     @content;
@@ -65,11 +54,6 @@ $super-light-grey: #f9f9f9;
 }
 @mixin min-1337 {
   @media (min-width: 1337px) {
-    @content;
-  }
-}
-@mixin max-height-620 {
-  @media (max-height: 620px) {
     @content;
   }
 }

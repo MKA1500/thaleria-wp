@@ -1,0 +1,36 @@
+#primary-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  @include max-991 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .menu-item {
+    &.current_page_item {
+      a {
+        color: $white;
+      }
+    }
+    a {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.87em;
+      padding-left: 1.125rem;
+      padding-right: 1.125rem;
+      color: $top-menu-gray;
+      transition: .2s linear;
+      @include max-991 {
+        color: $top-menu-gray-mobile;
+      }
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

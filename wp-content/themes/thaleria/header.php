@@ -30,8 +30,8 @@
 				<button class="navbar-toggler" type="button">&#9776;</button>
 				<?php	$homeUrl = home_url(); ?>
 				<a class="navbar-brand" href="<?php echo esc_url( $homeUrl ); ?>">
-					<img class="logo-dark" src="assets/img/logo/thaleria-logo-blue.png" alt="logo">
-					<img class="logo-light" src="assets/img/logo/thaleria-logo-white.png" alt="logo">
+					<img class="logo-dark" src="<?php echo get_template_directory_uri(); ?>/img/logo/thaleria-logo-blue.png" alt="logo">
+					<img class="logo-light" src="<?php echo get_template_directory_uri(); ?>/img/logo/thaleria-logo-white.png" alt="logo">
 				</a>
 			</div>
 			<section class="navbar-mobile">

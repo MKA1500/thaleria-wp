@@ -27,7 +27,7 @@
 	<div class="container text-white">
 		<div class="row gap-y align-items-center">
 			<div class="col-md-3 text-center text-md-left">
-				<a href="<?php echo esc_url( $homeUrl ); ?>"><img src="assets/img/logo/thaleria-logo-white.png" alt="logo"></a>
+				<a href="<?php echo esc_url( $homeUrl ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/thaleria-logo-white.png" alt="logo"></a>
 			</div>
 			<div class="col-md-6">
 				<div class="nav nav-center footer-menu">

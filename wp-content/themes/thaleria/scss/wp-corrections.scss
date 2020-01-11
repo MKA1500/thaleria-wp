@@ -1,3 +1,6 @@
+body {
+  background: linear-gradient(to right,#243b55,#141e30);
+}
 .logged-in.admin-bar {
   .navbar {
     top: 32px;
@@ -72,6 +75,26 @@
   }
 }
 
+#content > p {
+  display: none;
+}
+.mapouter {
+  text-align: right;
+  height: 500px;
+  width: 600px;
+  @include max-600 {
+    width: 100%;
+  }
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 600px;
+  @include max-600 {
+    width: 100%;
+  }
+}
 #cookie-notice {
   background-image: linear-gradient(to right, rgb(36, 59, 85), rgb(20, 30, 48))!important;
   border-top: 1px solid rgba(255,255,255,.3);

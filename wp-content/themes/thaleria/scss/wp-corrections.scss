@@ -80,20 +80,15 @@ body {
 }
 .mapouter {
   text-align: right;
-  height: 500px;
-  width: 600px;
-  @include max-600 {
-    width: 100%;
-  }
+  height: 400px;
+  width: 576px;
+  width: 100%;
 }
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
-  height: 500px;
-  width: 600px;
-  @include max-600 {
-    width: 100%;
-  }
+  height: 400px;
+  width: 100%;
 }
 #cookie-notice {
   background-image: linear-gradient(to right, rgb(36, 59, 85), rgb(20, 30, 48))!important;
@@ -123,6 +118,13 @@ body {
   }
 }
 .homepage-job-post {
+  .frontpage-thumbnail {
+    img {
+      height: 60px;
+      margin: 0 auto;
+      width: auto;
+    }
+  }
   .homepage-job-title {
     span {
       display: none;
@@ -139,5 +141,22 @@ body {
       font-size: 85%;
       font-weight: 400;
     }
+  }
+}
+.privacy-policy {
+  color: #FFF;
+  h1, h2, p, h3 {
+    color: #FFF;
+  }
+}
+
+.job-post-title {
+  span {
+    display: none!important;
+  }
+}
+.keywords-body {
+  .badge-outline-thaleria {
+    margin-right: .25rem;
   }
 }

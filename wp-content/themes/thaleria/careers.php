@@ -17,28 +17,51 @@ echo $content;
       </p>
     </header>
     <div class="accordion accordion-connected shadow-5" id="accordion-job">
-      <div class="card">
-        <h6 class="card-title-blue">
-          <a class="d-flex align-items-center collapsed" data-toggle="collapse" href="#collapse-job-1">
-            <strong class="mr-auto">Java Software Architect</strong>
-            <span class="small text-lighter">Brussels, Belgium <i class="fa fa-map-marker ml-2"></i></span>
-          </a>
-        </h6>
-        <div id="collapse-job-1" class="collapse" data-parent="#accordion-job">
-          <div class="card-body">
-            <p>Our client is expanding its IT development team and is
-              seeking a Developer/Architect
-              to provide IT software development and architecture definition services. The new team member will
-              actively participate in the development of a new platform and
-              contribute with fresh ideas to its success.</p>
-            <hr class="w-100px">
-            <p class="text-center"><a class="btn btn-lg btn-thaleria" href="careers-java-developer-architect.html"
-                target="_blank" rel="noopener noreferrer">Find
-                out more</a></p>
+        <?php
+        $jobIndex = 1;
+        $args = array(
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'category_name' => 'Job Post',
+          'posts_per_page' => 100
+        );
+        $arr_posts = new WP_Query( $args );
+        if ( $arr_posts->have_posts() ) :
+          while ( $arr_posts->have_posts() ) :
+          $arr_posts->the_post();
+          ?>
+          <div class="card careers-job-card" id="post-card-<?php the_ID(); ?>">
+            <h6 class="card-title-blue">
+              <a class="d-flex align-items-center collapsed job-title" data-toggle="collapse" href="#collapse-job-<?php echo $jobIndex ?>">
+                <?php the_title(); ?> <i class="fa fa-map-marker ml-2"></i>
+              </a>
+              <!-- <a class="d-flex align-items-center collapsed job-title" data-toggle="collapse" href="#collapse-job-<?php echo $jobIndex ?>">
+                <strong class="mr-auto"><?php the_title(); ?></strong>
+                <span class="small text-lighter">Brussels, Belgium <i class="fa fa-map-marker ml-2"></i></span>
+              </a> -->
+            </h6>
+            <div id="collapse-job-<?php echo $jobIndex ?>" class="collapse" data-parent="#accordion-job">
+              <div class="card-body">
+                <p><?php echo get_the_excerpt(); ?></p>
+                <hr class="w-100px">
+                <p class="text-center">
+                  <a
+                    class="btn btn-lg btn-thaleria"
+                    href="<?php echo get_permalink( $post->ID ); ?>"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Find out more</a>
+                  </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="card">
+          <?php
+          $jobIndex++;
+          endwhile;
+        endif;
+        ?>
+
+      <!-- <div class="card">
         <h6 class="card-title-blue">
           <a class="d-flex align-items-center collapsed" data-toggle="collapse" href="#collapse-job-2">
             <strong class="mr-auto">IT Security Manager</strong>
@@ -56,8 +79,8 @@ echo $content;
                 out more</a></p>
           </div>
         </div>
-      </div>
-      <div class="card">
+      </div> -->
+      <!-- <div class="card">
         <h6 class="card-title-blue">
           <a class="d-flex align-items-center collapsed" data-toggle="collapse" href="#collapse-job-3">
             <strong class="mr-auto">Data Architect</strong>
@@ -132,7 +155,8 @@ echo $content;
                 out more</a></p>
           </div>
         </div>
-      </div>
+      </div> -->
+    </div>
 </section>
 <?php
 get_footer();

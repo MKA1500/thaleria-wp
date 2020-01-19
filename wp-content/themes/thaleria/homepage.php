@@ -50,7 +50,7 @@ get_header();
           while ( $arr_posts->have_posts() ) :
           $arr_posts->the_post();
           ?>
-          <div class="col-lg-4" id="post-<?php the_ID(); ?>">
+          <div class="col-lg-4 homepage-job-post" id="post-<?php the_ID(); ?>">
             <div class="card card-body border text-center">
               <p class="my-5">
                 <i class="fab fa-java lead-8 text-blue"></i>
@@ -62,7 +62,7 @@ get_header();
                 endif;
                 ?>
               </div> -->
-              <h5><?php the_title(); ?></h5>
+              <h5 class="homepage-job-title"><?php the_title(); ?></h5>
               <p><?php echo get_the_excerpt(); ?></p>
               <p>
                 <a

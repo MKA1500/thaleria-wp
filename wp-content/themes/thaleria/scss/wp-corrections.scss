@@ -122,3 +122,22 @@ body {
     }
   }
 }
+.homepage-job-post {
+  .homepage-job-title {
+    span {
+      display: none;
+    }
+  }
+}
+.careers-job-card {
+  .job-title {
+    strong {
+      margin-right: auto;
+    }
+    span, .fa {
+      color: #bfc5ca;
+      font-size: 85%;
+      font-weight: 400;
+    }
+  }
+}

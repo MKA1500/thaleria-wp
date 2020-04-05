@@ -15,8 +15,8 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<main class="main-content bg-royal-blue">
+  <div class="container privacy-policy">
 
 		<?php
 		while ( have_posts() ) :
@@ -27,9 +27,8 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div>
+</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

@@ -96,51 +96,7 @@ get_header();
 				</header>
 				<div class="row">
 					<div class="col-md-8 mx-auto">
-						<form id="contactform" method="POST">
-							<input type="hidden" name="subject" value="Resume">
-							<div class="input-group">
-								<input type="text" class="form-control required" name="name" placeholder="First and Last Name" required>
-								<div class="input-group-append">
-									<span class="input-group-text"><i class="fa fa-user text-blue"></i></span>
-								</div>
-							</div>
-							<br>
-							<div class="input-group">
-								<input type="text" class="form-control" name="email" placeholder="Email address" required>
-								<div class="input-group-append">
-									<span class="input-group-text"><i class="fa fa-envelope text-blue"></i></span>
-								</div>
-							</div>
-							<br>
-							<div class="input-group">
-								<input type="text" class="form-control" name="linkedin" placeholder="LinkedIn Profile" required>
-								<div class="input-group-append">
-									<span class="input-group-text"><i class="fab fa-linkedin-in text-blue"></i></span>
-								</div>
-							</div>
-							<br>
-							<div class="input-group">
-								<input type="text" name="github" class="form-control" placeholder="Github Profile">
-								<div class="input-group-append">
-									<span class="input-group-text"><i class="fab fa-github-alt text-blue"></i></span>
-								</div>
-							</div>
-							<br>
-							<div class="form-group">
-								<textarea class="form-control" name="extra_information" placeholder="Tell us more about yourself" rows="3"></textarea>
-							</div>
-
-							<div class="form-group col-12 col-md-6">
-								<input type="text" name="_gotcha" style="display:none" />
-							</div>
-							<br>
-							<button type="submit" class="btn btn-light">Submit your application</button>
-						</div>
-					</form>
-					<script>
-						var contactform = document.getElementById('contactform');
-						contactform.setAttribute('action', '//formspree.io/' + 'recruitment' + '@' + 'thaleria' + '.' + 'com');
-					</script>
+						<?php echo get_field('apply-form'); ?>
 				</div>
 			</section>
 		</main><!-- /.main-content -->

@@ -16,7 +16,7 @@ get_header();
 ?>
 
 <main class="main-content bg-royal-blue">
-  <div class="container privacy-policy">
+  <div class="container thaleria-default-template">
 
 		<?php
 		while ( have_posts() ) :

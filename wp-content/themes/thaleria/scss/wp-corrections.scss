@@ -146,8 +146,17 @@ body {
 .privacy-policy,
 .thaleria-default-template {
   color: #FFF;
+  min-height: calc(100vh - 6rem);
   h1, h2, p, h3 {
     color: #FFF;
+  }
+  &.error-page-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 

@@ -62,7 +62,15 @@ get_header();
 							<div class="media">
 								<div class="media-body keywords-body">
 									<h5>Keywords</h5>
-									<?php echo get_field('keywords'); ?>
+									<?php 
+									$post_tags = get_the_tags();
+ 
+									if ( $post_tags ) {
+										foreach( $post_tags as $tag ) {
+										echo '<span class="badge badge-outline-thaleria">' . $tag->name . '</span>'; 
+										}
+									}
+									?>
 								</div>
 							</div>
 							<hr class="my-5">

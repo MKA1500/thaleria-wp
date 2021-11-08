@@ -1,0 +1,16 @@
+backend:
+	name: git-gateway
+	repo: nk7788/website_test
+
+
+media_folder: "assets/img"
+public_folder: "img"
+
+collections:
+    -name: "coding"
+      label: "Coding"
+      folder: "assets"
+      create: true
+      slug: "{{year}}-{{slug}}"
+      fields: 
+          -{label: "Title", name:"title", widget: "string", required: true}

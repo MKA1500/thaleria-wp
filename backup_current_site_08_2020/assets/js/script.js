@@ -27,7 +27,7 @@ $(function() {
     |
     */
 
-    googleApiKey: 'xx',
+    googleApiKey: 'AIzaSyDRBLFOTTh2NFM93HpUA4ZrA99yKnCAsto',
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ $(function() {
     |
     */
 
-    reCaptchaSiteKey:  'xx',
+    reCaptchaSiteKey:  '6Ldaf0MUAAAAAHdsMv_7dND7BSTvdrE6VcQKpM-n',
 
     // See available languages: https://developers.google.com/recaptcha/docs/language
     reCaptchaLanguage: '',

@@ -1,3 +1,3 @@
 jQuery(document).ready(function($){
-  console.log('hello there js');
+  // console.log('hello there js');
 });
